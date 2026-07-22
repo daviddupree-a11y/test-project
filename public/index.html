@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#111114">
+<title>Enterprise SMB Seller Study Lab</title>
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+<div class="brand">Seller Study Lab<small>ChatGPT Enterprise for SMB</small></div>
+<nav class="nav" id="nav"></nav>
+<div class="sidebar-note">Core selling lens: do not sell a checkbox. Sell the operating model behind the feature.</div>
+</aside>
+<main class="main">
+<header class="topbar"><strong>Enterprise SMB Seller Enablement</strong><span id="progressLabel">0 cards reviewed · 0 quiz correct</span></header>
+<div class="page">
+<section class="view active" id="home">
+<div class="hero"><span class="tag">Business vs. Enterprise</span><h1>Learn the difference that matters.</h1><p>Practice positioning ChatGPT Enterprise as the governed operating model for broader deployment, deeper controls, compliance needs, and company-wide adoption.</p><button class="primary" data-go="definitions">Start studying</button></div>
+<div class="mode-grid" id="modeGrid"></div>
+</section>
+<section class="view" id="definitions">
+<div class="section-head"><div><h2>Definition flashcards</h2><p>Select the card to reveal the seller-ready definition.</p></div></div>
+<div class="toolbar"><input id="definitionSearch" type="search" placeholder="Search topics"><select id="definitionFilter"><option value="all">All topics</option><option value="Enterprise only">Enterprise only</option><option value="Expanded">Expanded</option><option value="Same">Same</option></select></div>
+<button class="panel flashcard" id="flashcard" type="button" aria-label="Reveal flashcard answer"></button>
+<div class="controls"><button class="secondary" id="previousCard" type="button">Previous</button><button class="primary" id="markReviewed" type="button">Mark reviewed</button><button class="secondary" id="nextCard" type="button">Next</button></div>
+</section>
+<section class="view" id="benefits">
+<div class="section-head"><div><h2>Benefit flashcards</h2><p>Move from simple value language to an IT-ready technical talk track.</p></div></div>
+<div class="level-tabs" id="levelTabs"></div>
+<div class="panel benefit-card" id="benefitCard"></div>
+<div class="controls"><button class="secondary" id="previousBenefit" type="button">Previous</button><button class="secondary" id="nextBenefit" type="button">Next</button></div>
+</section>
+<section class="view" id="scenarios">
+<div class="section-head"><div><h2>Scenario quizzes</h2><p>Qualify whether Business is enough or Enterprise is the right conversation.</p></div></div>
+<div class="panel quiz-card" id="quizCard">
+<div class="quiz-meta"><span id="questionCounter"></span><span id="quizStatus"></span></div>
+<h3 id="questionText"></h3>
+<div class="answer-list" id="answerList" role="group" aria-label="Answer choices"></div>
+<div class="feedback" id="quizFeedback" aria-live="polite"></div>
+<div class="quiz-actions"><span class="score" id="scoreLabel"></span><button class="primary" id="nextQuestion" type="button">Next scenario</button></div>
+</div>
+</section>
+<section class="view" id="custom">
+<div class="section-head"><div><h2>Custom study set</h2><p>Create company or vertical-specific seller practice from the core fact base.</p></div></div>
+<div class="custom-layout"><form class="panel custom-form" id="customForm"><input id="company" placeholder="Company name"><select id="vertical"><option>Professional services</option><option>Healthcare</option><option>Financial services</option><option>Retail</option><option>Manufacturing</option><option>Technology</option><option>Education</option></select><select id="persona"><option>Business buyer</option><option>Department leader</option><option>IT professional</option></select><textarea id="notes" placeholder="Known priorities, systems, risks, or buying signals"></textarea><button class="primary" type="submit">Generate study set</button></form><div><div class="notice">Uses the presentation's seller framing and avoids inventing unsupported product claims.</div><div class="custom-output" id="customOutput"><article class="panel">Enter a company or vertical to generate tailored prompts.</article></div></div></div>
+</section>
+<section class="view" id="freshness">
+<div class="section-head"><div><h2>Product freshness</h2><p>Seller claims should be reviewed against current official OpenAI documentation before customer use.</p></div></div>
+<div class="notice">This public study aid is based on the supplied presentation. Model names, limits, and feature availability can change.</div>
+<div class="source-grid"><article class="panel"><h3>Review sources</h3><p>ChatGPT pricing and plan comparison</p><p>Enterprise privacy and business data pages</p><p>SSO, SCIM, Compliance Platform, IP allowlisting, residency, apps, and analytics documentation</p></article><article class="panel"><h3>Update policy</h3><p>Verify changed claims, update the fact base, then refresh definitions, benefit cards, and scenarios together.</p></article></div>
+</section>
+<div class="footer">Built from the seller presentation supplied in this conversation. Public training aid, not a contractual product specification.</div>
+</div>
+</main>
+</div>
+<script src="./app.js" defer></script>
+</body>
+</html>
